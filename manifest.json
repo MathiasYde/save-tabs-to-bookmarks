@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Save Tabs to Bookmarks",
+  "description": "Save your open tabs right into your bookmarks!",
+  "version": "0.2",
+  "author": "Mathias Yde",
+  "permissions": [
+    "bookmarks",
+    "tabs"
+  ],
+  "options_page": "",
+  "browser_action": {
+		"default_popup": "popup.html"
+	},
+  "icons": {"36": "icon.png"}
+}
