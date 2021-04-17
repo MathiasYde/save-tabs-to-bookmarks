@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Save Tabs to Bookmarks",
   "description": "Save your open tabs right into your bookmarks!",
   "version": "0.2",
@@ -9,8 +9,10 @@
     "tabs"
   ],
   "options_page": "",
-  "browser_action": {
-		"default_popup": "popup.html"
-	},
-  "icons": {"36": "icon.png"}
+  "icons": {
+    "36": "icon.png"
+  },
+	"action": {
+    "default_popup": "popup.html"
+  }
 }

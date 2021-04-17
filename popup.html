@@ -6,27 +6,17 @@
   </head>
 
   <body>
-    <button id="SAVE_SESSION">SAVE SESSION</button>
-    Sites to save to session:
-    <!--<textarea id="SITE_LIST" cols='80' rows='8' wrap="soft" readonly></textarea>-->
-    <ul id="SITE_LIST">
-      <li>https://www.youtube.com<span class="close">&times;</span></li>
-    </ul>
-    &nbsp
-    &nbsp
-    Session name: <input type="text" id="SESSION_NAME" value="Session {MM}-{DD} {hh}-{mm}-{ss}"><br>
+    <div class="column p4">
+      <button class="p8" id="SAVE_SESSION">Save session</button>
+    
+      <ul class="listview mt8 column mh256" id="TAB_LIST">
+        <!-- <li class="listtile mt4 ml4 mb4 p4">
+          <span>tommyinnit - Twitch</span>
+          <button class="trailing p8">&times;</button>
+        </li> -->
+      </ul>
 
-    <select id="TAB_DROPDOWN">
-      <option value="TDD_DEFAULT">Other Bookmarks/Saved Tabs</option>
-    </select>
-
-    <input type="checkbox" id="USE_TAB_TITLE">Use tab title</input>
-
-    <br>
-
-    Exclude all tabs: &frac12;<br>
-     <span class="click">&and;</span> <span class="click">&or;</span> - Has keyword in title:<br>
-     - Starts with keyword in title:<br>
+    </div>
 
 
     <script src="popup.js"></script>

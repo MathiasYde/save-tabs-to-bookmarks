@@ -1,52 +1,58 @@
-button {
-	border: 1px solid black;
-	border-color: black;
-	padding: 6px 4px;
-	border-spacing: 1px;
-	border-style: solid;
-	color: black;
-	background-color: white;
-}
-
-input {
-	border: 1px solid black;
-	color: black;
-	background-color: white;
-}
-
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
-ul {
+html, body {
+  height: 100%;
+  width: 420px;
+}
+
+.p1 { padding: 1px; }
+.p2 { padding: 2px; }
+.p4 { padding: 4px; }
+.p6 { padding: 6px; }
+.p8 { padding: 8px; }
+
+.m4 { margin: 4px; }
+.m8 { margin: 8px; }
+.mt4 { margin-top: 4px; }
+.mt8 { margin-top: 8px; }
+.ml4 { margin-left: 4px; }
+.ml8 { margin-left: 8px; }
+.mb4 { margin-bottom: 4px; }
+.mb8 { margin-bottom: 8px; }
+.mr4 { margin-right: 4px; }
+.mr8 { margin-right: 8px; }
+
+.mh64 { max-height: 64px; }
+.mh128 { max-height: 128px; }
+.mh256 { max-height: 256px; }
+.mh512 { max-height: 512px; }
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.listview > .listtile > .trailing {
+  margin-left: auto;
+}
+
+.listview > .listtile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.listview {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
+  height: 100%;
+  overflow-y: scroll;
 }
-
-ul li {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 4px;
-  text-decoration: none;
-  font-size: 12px;
-  color: black;
-  display: block;
-  position: relative;
-}
-
-ul li:hover {
-  background-color: #eee;
-}
-
-.close {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  right: 0%;
-  padding: 6px 8px;
-  transform: translate(0%, -50%);
-}
-
-.close:hover {background: #bbb;}
