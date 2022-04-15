@@ -1,2 +1,2 @@
-# wayback-machine
- Adds a button to quickly navigate to Wayback machine for this URL
+# save-tabs-to-bookmarks
+ A Chrome extension to easily save your open tabs to bookmarks for later use.

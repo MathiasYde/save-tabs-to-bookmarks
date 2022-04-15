@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 420px;
+}
+
+.p1 { padding: 1px; }
+.p2 { padding: 2px; }
+.p4 { padding: 4px; }
+.p6 { padding: 6px; }
+.p8 { padding: 8px; }
+
+.m4 { margin: 4px; }
+.m8 { margin: 8px; }
+.mt4 { margin-top: 4px; }
+.mt8 { margin-top: 8px; }
+.ml4 { margin-left: 4px; }
+.ml8 { margin-left: 8px; }
+.mb4 { margin-bottom: 4px; }
+.mb8 { margin-bottom: 8px; }
+.mr4 { margin-right: 4px; }
+.mr8 { margin-right: 8px; }
+
+.mh64 { max-height: 64px; }
+.mh128 { max-height: 128px; }
+.mh256 { max-height: 256px; }
+.mh512 { max-height: 512px; }
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.listview > .listtile > .trailing {
+  margin-left: auto;
+}
+
+.listview > .listtile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.listview {
+  list-style-type: none;
+  height: 100%;
+  overflow-y: scroll;
+}
