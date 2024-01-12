@@ -1,5 +1,6 @@
 const tablist = document.getElementById("TAB_LIST");
-let opentabs = [];
+
+let openTabs = [];
 let parentFolder = null;
 
 function fetchParentFolder() {
@@ -21,7 +22,7 @@ function fetchParentFolder() {
 fetchParentFolder();
 
 function removetab(index) {
-	opentabs.splice(index, 1)
+	openTabs.splice(index, 1)
 	previewtabs()
 }
 
@@ -32,8 +33,10 @@ function previewtabs() {
 	}
 
 	// Add tiles
-	for (let i = 0; i < opentabs.length; i++) {
-		const tab = opentabs[i];
+	for (let i = 0; i < openTabs.length; i++) {
+		const tab = openTabs[i];
+
+		console.log(tab.group);
 
 		listtile = document.createElement("li");
 		listtile.classList = "listtile mt4 ml4 mb4 p4";
@@ -68,20 +71,20 @@ function getSessionName() {
 chrome.tabs.query({
 	currentWindow: true
 }, function (tabs) {
-	tabs.forEach((tab) => opentabs.push(tab));
+	tabs.forEach((tab) => openTabs.push(tab));
 	previewtabs();
 });
 
 document.getElementById("SAVE_SESSION").addEventListener("click", (event) => {
-	const sessionname = getSessionName();
+	const sessionName = getSessionName();
 
 	chrome.bookmarks.create({
-			"parentId": parentFolder,
-			"title": sessionname
-		},
+		"parentId": parentFolder,
+		"title": sessionName
+	},
 		function (folder) {
 
-			opentabs.forEach(tab => chrome.bookmarks.create({
+			openTabs.forEach(tab => chrome.bookmarks.create({
 				parentId: folder.id,
 				title: tab.title,
 				url: tab.url
